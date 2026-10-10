@@ -521,6 +521,65 @@ a:hover {
 }
 
 /* ═══════════════════════════════════════════════
+   CERTIFICATIONS
+   ═══════════════════════════════════════════════ */
+
+.certs-group {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.certs-group h3 {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--soviet-brown-light);
+  margin-bottom: 14px;
+}
+
+.certs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.cert-badge {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 8px 18px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.cert-badge:hover {
+  transform: translateY(-2px);
+}
+
+.cert-done {
+  border: 2px solid var(--soviet-olive);
+  color: var(--soviet-olive);
+  background: rgba(74,83,56,0.08);
+}
+
+.cert-planned {
+  border: 2px solid var(--soviet-gold);
+  color: var(--soviet-rust);
+  background: rgba(197,165,90,0.1);
+}
+
+.cert-wip {
+  border: 2px dashed var(--soviet-red);
+  color: var(--soviet-red);
+  background: rgba(139,26,26,0.06);
+}
+
+/* ═══════════════════════════════════════════════
    CONTACT / LINKS
    ═══════════════════════════════════════════════ */
 

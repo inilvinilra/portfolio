@@ -31,6 +31,7 @@ import Layout from '../layouts/Layout.astro';
       <li><a href="#projects" data-i18n="nav_projects">Проекты</a></li>
       <li><a href="#stack" data-i18n="nav_arsenal">Арсенал</a></li>
       <li><a href="#security" data-i18n="nav_operations">Операции</a></li>
+      <li><a href="#certs" data-i18n="nav_certs">Аттестации</a></li>
       <li><a href="#linux" data-i18n="nav_systems">Системы</a></li>
       <li><a href="#contact" data-i18n="nav_comms">Связь</a></li>
       <li class="lang-switcher">
@@ -300,6 +301,50 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- ═══ CERTIFICATIONS ═══ -->
+  <section id="certs" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_certs">Аттестации</h2>
+        <p data-i18n="sec_certs_sub">Профессиональные сертификации</p>
+      </div>
+
+      <div class="certs-group">
+        <h3 data-i18n="certs_target">Планируемые</h3>
+        <div class="certs-grid">
+          <span class="cert-badge cert-planned">CRTO</span>
+          <span class="cert-badge cert-planned">CRTL</span>
+          <span class="cert-badge cert-planned">CRTP</span>
+          <span class="cert-badge cert-planned">CAPEN</span>
+          <span class="cert-badge cert-planned">CNPEN</span>
+          <span class="cert-badge cert-planned">CMPEN</span>
+          <span class="cert-badge cert-planned">CRTEAMer</span>
+        </div>
+      </div>
+
+      <div class="certs-group">
+        <h3 data-i18n="certs_completed">Завершённые</h3>
+        <div class="certs-grid">
+          <span class="cert-badge cert-done">CRTA</span>
+          <span class="cert-badge cert-done">WEB-RTA</span>
+          <span class="cert-badge cert-done">API-RTA</span>
+          <span class="cert-badge cert-done">AD-RTS</span>
+          <span class="cert-badge cert-done">C3SA</span>
+          <span class="cert-badge cert-done">CRT-COI</span>
+          <span class="cert-badge cert-done">AI-RTA</span>
+          <span class="cert-badge cert-done">CPIA</span>
+        </div>
+      </div>
+
+      <div class="certs-group">
+        <h3 data-i18n="certs_progress">В процессе</h3>
+        <div class="certs-grid">
+          <span class="cert-badge cert-wip">BTF</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ LINUX ═══ -->
   <section id="linux" class="section">
     <div class="container">
@@ -414,6 +459,7 @@ const translations = {
     nav_projects: "Проекты",
     nav_arsenal: "Арсенал",
     nav_operations: "Операции",
+    nav_certs: "Аттестации",
     nav_systems: "Системы",
     nav_comms: "Связь",
     sec_manifesto: "Манифест",
@@ -448,6 +494,11 @@ const translations = {
     tools_web: "Веб, AppSec и разведка",
     tools_net: "Сеть, уязвимости и анализ трафика",
     tools_blue: "Синяя команда, обнаружение и разведка",
+    sec_certs: "Аттестации",
+    sec_certs_sub: "Профессиональные сертификации",
+    certs_target: "Планируемые",
+    certs_completed: "Завершённые",
+    certs_progress: "В процессе",
     sec_linux: "Системы и дистрибутивы",
     sec_linux_sub: "Инженерия Linux",
     sec_comms: "Связь",
@@ -466,6 +517,7 @@ const translations = {
     nav_projects: "Projeler",
     nav_arsenal: "Cephanelik",
     nav_operations: "Operasyonlar",
+    nav_certs: "Sertifikalar",
     nav_systems: "Sistemler",
     nav_comms: "İletişim",
     sec_manifesto: "Manifesto",
@@ -500,6 +552,11 @@ const translations = {
     tools_web: "Web, AppSec ve Keşif",
     tools_net: "Ağ, Zafiyet ve Trafik Analizi",
     tools_blue: "Mavi Takım, Tespit ve İstihbarat",
+    sec_certs: "Sertifikalar",
+    sec_certs_sub: "Profesyonel Sertifikalar",
+    certs_target: "Hedeflenen",
+    certs_completed: "Tamamlanan",
+    certs_progress: "Devam Eden",
     sec_linux: "Sistemler ve Dağıtımlar",
     sec_linux_sub: "Linux Mühendisliği",
     sec_comms: "İletişim",
@@ -552,6 +609,11 @@ const translations = {
     tools_web: "الويب وأمن التطبيقات والاستطلاع",
     tools_net: "الشبكات والثغرات وتحليل حركة المرور",
     tools_blue: "الفريق الأزرق والكشف والاستخبارات",
+    sec_certs: "الشهادات",
+    sec_certs_sub: "الشهادات المهنية",
+    certs_target: "المخطط لها",
+    certs_completed: "المكتملة",
+    certs_progress: "قيد التقدم",
     sec_linux: "الأنظمة والتوزيعات",
     sec_linux_sub: "هندسة لينكس",
     sec_comms: "الاتصالات",
@@ -570,6 +632,7 @@ const translations = {
     nav_projects: "Projects",
     nav_arsenal: "Arsenal",
     nav_operations: "Operations",
+    nav_certs: "Certifications",
     nav_systems: "Systems",
     nav_comms: "Comms",
     sec_manifesto: "Manifesto",
@@ -604,6 +667,11 @@ const translations = {
     tools_web: "Web, AppSec & Reconnaissance",
     tools_net: "Network, Vulnerability & Traffic Analysis",
     tools_blue: "Blue Team, Detection & Intelligence",
+    sec_certs: "Certifications",
+    sec_certs_sub: "Professional Certifications",
+    certs_target: "Targeted",
+    certs_completed: "Completed",
+    certs_progress: "In Progress",
     sec_linux: "Systems & Distributions",
     sec_linux_sub: "Linux Engineering",
     sec_comms: "Communications",
