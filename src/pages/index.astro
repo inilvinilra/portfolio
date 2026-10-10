@@ -1,0 +1,643 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="INILVINILRA — Security Engineering">
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-bismillah">بسم الله الرحمن الرحيم</div>
+      <h1>Inilvinilra</h1>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">
+        Создание платформ безопасности, систем киберразведки,
+        инструментов конфиденциальности и сред на базе Linux.
+      </p>
+      <div class="hero-roles">
+        <span data-i18n="role_sec">Инженерия безопасности</span>
+        <span data-i18n="role_cti">Киберразведка</span>
+        <span data-i18n="role_osint">OSINT</span>
+        <span data-i18n="role_devsecops">DevSecOps</span>
+        <span data-i18n="role_linux">Инженерия Linux</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav-strip">
+    <ul>
+      <li><a href="#about" data-i18n="nav_manifesto">Манифест</a></li>
+      <li><a href="#anthem" data-i18n="nav_anthem">Гимн</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Проекты</a></li>
+      <li><a href="#stack" data-i18n="nav_arsenal">Арсенал</a></li>
+      <li><a href="#security" data-i18n="nav_operations">Операции</a></li>
+      <li><a href="#linux" data-i18n="nav_systems">Системы</a></li>
+      <li><a href="#contact" data-i18n="nav_comms">Связь</a></li>
+      <li class="lang-switcher">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="tr">TR</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_manifesto">Манифест</h2>
+        <p data-i18n="sec_manifesto_sub">Идентичность и направление</p>
+      </div>
+      <div class="manifest">
+        <p data-i18n="about_p1">
+          Я создаю платформы, ориентированные на безопасность, системы
+          киберразведки, инструменты конфиденциальности и среды на базе Linux.
+          Моя работа проектно-ориентирована и находится на стыке разработки ПО,
+          киберразведки, OSINT, безопасности Linux, автоматизации
+          инфраструктуры, инженерии конфиденциальности и DevSecOps.
+        </p>
+        <p data-i18n="about_p2">
+          Я сосредоточен на проектировании практических систем, поддерживающих
+          реальные рабочие процессы безопасности — понятных, самостоятельно
+          размещаемых, учитывающих конфиденциальность и поддерживаемых — вместо
+          того, чтобы просто использовать существующие инструменты.
+        </p>
+        <p data-i18n="about_p3">
+          Я предпочитаю создавать практические системы, а не полагаться на
+          готовые инструменты — понимать, как работают системы, проектировать
+          чистые архитектуры и улучшать проекты через реальное тестирование,
+          автоматизацию и операционное мышление.
+        </p>
+        <ul class="direction-list">
+          <li data-i18n="dir_cti">Киберразведка</li>
+          <li data-i18n="dir_asm">Мониторинг поверхности атак</li>
+          <li data-i18n="dir_osint">OSINT и автоматизация</li>
+          <li data-i18n="dir_linux">Безопасность Linux</li>
+          <li data-i18n="dir_privacy">Конфиденциальность и OPSEC</li>
+          <li data-i18n="dir_devops">DevOps / SecOps</li>
+          <li data-i18n="dir_products">Продукты безопасности</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ANTHEM / VIDEO ═══ -->
+  <section id="anthem" class="section video-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_anthem">Гимн</h2>
+        <p data-i18n="sec_anthem_sub">Звук Родины</p>
+      </div>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/iVT-xucp1m8?rel=0"
+          title="Anthem"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_projects">Портфолио проектов</h2>
+        <p data-i18n="sec_projects_sub">Труды инженерного бюро народа</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <h3>FecaiCTI Nexus</h3>
+          <p data-i18n="proj_nexus">
+            Модульная платформа киберразведки и мониторинга внешней поверхности
+            атак. Утечки учётных данных, обнаружение угроз, оповещения,
+            инциденты, поддельные домены, сигналы даркнета, риски поставщиков,
+            защита VIP и рабочие процессы соответствия.
+          </p>
+          <div class="project-tags">
+            <span>NestJS</span><span>TypeScript</span><span>Next.js</span>
+            <span>PostgreSQL</span><span>Prisma</span><span>Redis</span>
+            <span>RabbitMQ</span><span>Docker</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Null Linux</h3>
+          <p data-i18n="proj_null">
+            Дистрибутив кибербезопасности на базе Arch для исследований
+            безопасности, конфиденциальности и наступательных/оборонительных
+            рабочих процессов. Подобранный инструментарий для red team, blue
+            team, OSINT, OPSEC, форензики и ежедневного использования с
+            акцентом на приватность.
+          </p>
+          <div class="project-tags">
+            <span>Arch Linux</span><span>BlackArch</span><span>KDE Plasma</span>
+            <span>Calamares</span><span>Privacy</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>CyberRSS</h3>
+          <p data-i18n="proj_rss">
+            Самостоятельно размещаемый агрегатор разведывательных лент для
+            кибербезопасности, ИИ и технологического контента. Собирает,
+            нормализует, классифицирует и представляет релевантный технический
+            контент через чистые разведывательные рабочие процессы.
+          </p>
+          <div class="project-tags">
+            <span>RSS</span><span>Threat Intel</span>
+            <span>Feed Processing</span><span>Automation</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Broowser</h3>
+          <p data-i18n="proj_broowser">
+            Браузер на базе Firefox, ориентированный на конфиденциальность,
+            безопасность, усиленные настройки по умолчанию и более чистый опыт
+            просмотра. Конфигурация «конфиденциальность прежде всего» и
+            ориентированный на безопасность UX.
+          </p>
+          <div class="project-tags">
+            <span>Firefox</span><span>Hardening</span>
+            <span>Privacy</span><span>Security Defaults</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Null Calamares</h3>
+          <p data-i18n="proj_calamares">
+            Основа установщика для дистрибутива Linux, ориентированного на
+            безопасность. Процесс установки, брендинг дистрибутива, параметры
+            конфиденциальности и подобранный выбор пакетов.
+          </p>
+          <div class="project-tags">
+            <span>Calamares</span><span>Linux Installer</span>
+            <span>Distribution Engineering</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Null Welcome</h3>
+          <p data-i18n="proj_welcome">
+            Опыт подготовки и пост-установки для Null Linux. Обнаружение
+            инструментов, рабочие процессы безопасности на основе ролей,
+            многоязычный UX и практическая настройка системы.
+          </p>
+          <div class="project-tags">
+            <span>Desktop UX</span><span>Security Workflows</span>
+            <span>Linux Onboarding</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STACK ═══ -->
+  <section id="stack" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_arsenal">Инженерный арсенал</h2>
+        <p data-i18n="sec_arsenal_sub">Средства производства</p>
+      </div>
+
+      <div class="stack-category">
+        <h3 data-i18n="stack_lang">Языки и среда выполнения</h3>
+        <div class="stack-items">
+          <span class="stack-item">TypeScript</span>
+          <span class="stack-item">JavaScript</span>
+          <span class="stack-item">Python</span>
+          <span class="stack-item">Go</span>
+          <span class="stack-item">Rust</span>
+          <span class="stack-item">Bash</span>
+          <span class="stack-item">Node.js</span>
+        </div>
+      </div>
+
+      <div class="stack-category">
+        <h3 data-i18n="stack_backend">Бэкенд, фронтенд и данные</h3>
+        <div class="stack-items">
+          <span class="stack-item">NestJS</span>
+          <span class="stack-item">Next.js</span>
+          <span class="stack-item">React</span>
+          <span class="stack-item">PostgreSQL</span>
+          <span class="stack-item">Redis</span>
+          <span class="stack-item">Prisma</span>
+          <span class="stack-item">RabbitMQ</span>
+        </div>
+      </div>
+
+      <div class="stack-category">
+        <h3 data-i18n="stack_infra">Инфраструктура и операции</h3>
+        <div class="stack-items">
+          <span class="stack-item">Docker</span>
+          <span class="stack-item">Nginx</span>
+          <span class="stack-item">Linux</span>
+          <span class="stack-item">Git</span>
+          <span class="stack-item">GitHub</span>
+          <span class="stack-item">GitHub Actions</span>
+          <span class="stack-item">Prometheus</span>
+          <span class="stack-item">Grafana</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECURITY TOOLS ═══ -->
+  <section id="security" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_security">Операции безопасности</h2>
+        <p data-i18n="sec_security_sub">Экосистема инструментов</p>
+      </div>
+
+      <div class="tools-section">
+        <h3 data-i18n="tools_web">Веб, AppSec и разведка</h3>
+        <div class="tools-grid">
+          <span class="tool-badge">Burp Suite</span>
+          <span class="tool-badge">OWASP ZAP</span>
+          <span class="tool-badge">Nuclei</span>
+          <span class="tool-badge">ffuf</span>
+          <span class="tool-badge">Nikto</span>
+          <span class="tool-badge">Gobuster</span>
+          <span class="tool-badge">sqlmap</span>
+          <span class="tool-badge">Amass</span>
+          <span class="tool-badge">Subfinder</span>
+          <span class="tool-badge">httpx</span>
+        </div>
+      </div>
+
+      <div class="tools-section">
+        <h3 data-i18n="tools_net">Сеть, уязвимости и анализ трафика</h3>
+        <div class="tools-grid">
+          <span class="tool-badge">Nmap</span>
+          <span class="tool-badge">Wireshark</span>
+          <span class="tool-badge">Nessus</span>
+          <span class="tool-badge">Metasploit</span>
+          <span class="tool-badge">Masscan</span>
+          <span class="tool-badge">Naabu</span>
+        </div>
+      </div>
+
+      <div class="tools-section">
+        <h3 data-i18n="tools_blue">Синяя команда, обнаружение и разведка</h3>
+        <div class="tools-grid">
+          <span class="tool-badge">YARA</span>
+          <span class="tool-badge">Sigma</span>
+          <span class="tool-badge">Suricata</span>
+          <span class="tool-badge">Zeek</span>
+          <span class="tool-badge">Wazuh</span>
+          <span class="tool-badge">Elastic</span>
+          <span class="tool-badge">Shodan</span>
+          <span class="tool-badge">Maltego</span>
+          <span class="tool-badge">SpiderFoot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LINUX ═══ -->
+  <section id="linux" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_linux">Системы и дистрибутивы</h2>
+        <p data-i18n="sec_linux_sub">Инженерия Linux</p>
+      </div>
+      <div class="linux-badges">
+        <span class="linux-badge">Arch Linux</span>
+        <span class="linux-badge">Debian</span>
+        <span class="linux-badge">Gentoo</span>
+        <span class="linux-badge">Void Linux</span>
+        <span class="linux-badge">Fedora</span>
+        <span class="linux-badge">BlackArch</span>
+        <span class="linux-badge">KDE Plasma</span>
+        <span class="linux-badge">Wayland</span>
+        <span class="linux-badge">Calamares</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_comms">Связь</h2>
+        <p data-i18n="sec_comms_sub">Установить контакт</p>
+      </div>
+      <div class="links-grid">
+        <a href="mailto:inilvinilra@proton.me" class="link-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Proton Mail
+        </a>
+        <a href="https://github.com/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.1-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.2.9 2.4v3.5c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+          GitHub
+        </a>
+        <a href="https://gitlab.com/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m23.6 9.6-.1-.3L20.2 1a.8.8 0 0 0-.8-.5.8.8 0 0 0-.7.5l-2.2 6.8H7.5L5.3 1A.8.8 0 0 0 4.6.5a.8.8 0 0 0-.8.5L.5 9.3l-.1.3a5.6 5.6 0 0 0 1.9 6.5l.1.1 4.8 3.6 2.4 1.8 1.5 1.1a.9.9 0 0 0 1.1 0l1.5-1.1 2.4-1.8 4.9-3.7a5.6 5.6 0 0 0 1.9-6.5z"/></svg>
+          GitLab
+        </a>
+        <a href="https://www.linkedin.com/in/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.9-3-1.8 0-2 1.4-2 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.3zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.credly.com/users/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 14.5l-4-4 1.4-1.4L11 13.7l5.6-5.6L18 9.5l-7 7z"/></svg>
+          Credly
+        </a>
+        <a href="https://stackoverflow.com/users/17715799/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 21H3v-8h2v6h10v-6h2v8zm-1.3-8.3l-9-1 .3-2 9 1-.3 2zm1-4.6l-8.4-4 .9-1.8 8.4 4-.9 1.8zM18 3l-1.2-1.5-6.8 7 1.2 1.5 6.8-7zm3 6h-9v2h9V9z"/></svg>
+          Stack Overflow
+        </a>
+        <a href="https://hackerone.com/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2v20l5-3 5 3V2H7z"/></svg>
+          HackerOne
+        </a>
+        <a href="https://tryhackme.com/p/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          TryHackMe
+        </a>
+        <a href="https://app.hackthebox.com/profile/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.09-.34.14-.53.14s-.36-.05-.53-.14l-7.9-4.44A1 1 0 0 1 3 16.5v-9a1 1 0 0 1 .53-.88l7.9-4.44a1 1 0 0 1 1.06 0l7.9 4.44c.32.17.53.5.53.88v9z"/></svg>
+          Hack The Box
+        </a>
+        <a href="https://www.youtube.com/@inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/></svg>
+          YouTube
+        </a>
+        <a href="https://kick.com/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Kick
+        </a>
+        <a href="https://dev.to/inilvinilra" class="link-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 5h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v10h10V7H7z"/></svg>
+          DEV.to
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-star">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,5 61,35 95,35 68,55 79,85 50,67 21,85 32,55 5,35 39,35" />
+        </svg>
+      </div>
+      <p class="motto" data-i18n="footer_motto">"Понимать, как работают системы, проектировать чистые архитектуры."</p>
+      <p>INILVINILRA &mdash; MMXXVI</p>
+      <div class="footer-causes">
+        <span class="cause-badge" dir="rtl">فلسطين حرة — Free Palestine</span>
+        <span class="cause-badge">Free East Turkestan</span>
+      </div>
+    </div>
+  </footer>
+
+</Layout>
+
+<script>
+const translations = {
+  ru: {
+    hero_subtitle: "Создание платформ безопасности, систем киберразведки, инструментов конфиденциальности и сред на базе Linux.",
+    role_sec: "Инженерия безопасности",
+    role_cti: "Киберразведка",
+    role_osint: "OSINT",
+    role_devsecops: "DevSecOps",
+    role_linux: "Инженерия Linux",
+    nav_manifesto: "Манифест",
+    nav_anthem: "Гимн",
+    nav_projects: "Проекты",
+    nav_arsenal: "Арсенал",
+    nav_operations: "Операции",
+    nav_systems: "Системы",
+    nav_comms: "Связь",
+    sec_manifesto: "Манифест",
+    sec_manifesto_sub: "Идентичность и направление",
+    about_p1: "Я создаю платформы, ориентированные на безопасность, системы киберразведки, инструменты конфиденциальности и среды на базе Linux. Моя работа проектно-ориентирована и находится на стыке разработки ПО, киберразведки, OSINT, безопасности Linux, автоматизации инфраструктуры, инженерии конфиденциальности и DevSecOps.",
+    about_p2: "Я сосредоточен на проектировании практических систем, поддерживающих реальные рабочие процессы безопасности — понятных, самостоятельно размещаемых, учитывающих конфиденциальность и поддерживаемых — вместо того, чтобы просто использовать существующие инструменты.",
+    about_p3: "Я предпочитаю создавать практические системы, а не полагаться на готовые инструменты — понимать, как работают системы, проектировать чистые архитектуры и улучшать проекты через реальное тестирование, автоматизацию и операционное мышление.",
+    dir_cti: "Киберразведка",
+    dir_asm: "Мониторинг поверхности атак",
+    dir_osint: "OSINT и автоматизация",
+    dir_linux: "Безопасность Linux",
+    dir_privacy: "Конфиденциальность и OPSEC",
+    dir_devops: "DevOps / SecOps",
+    dir_products: "Продукты безопасности",
+    sec_anthem: "Гимн",
+    sec_anthem_sub: "Звук Родины",
+    sec_projects: "Портфолио проектов",
+    sec_projects_sub: "Труды инженерного бюро народа",
+    proj_nexus: "Модульная платформа киберразведки и мониторинга внешней поверхности атак. Утечки учётных данных, обнаружение угроз, оповещения, инциденты, поддельные домены, сигналы даркнета, риски поставщиков, защита VIP и рабочие процессы соответствия.",
+    proj_null: "Дистрибутив кибербезопасности на базе Arch для исследований безопасности, конфиденциальности и наступательных/оборонительных рабочих процессов. Подобранный инструментарий для red team, blue team, OSINT, OPSEC, форензики и ежедневного использования с акцентом на приватность.",
+    proj_rss: "Самостоятельно размещаемый агрегатор разведывательных лент для кибербезопасности, ИИ и технологического контента. Собирает, нормализует, классифицирует и представляет релевантный технический контент через чистые разведывательные рабочие процессы.",
+    proj_broowser: "Браузер на базе Firefox, ориентированный на конфиденциальность, безопасность, усиленные настройки по умолчанию и более чистый опыт просмотра. Конфигурация «конфиденциальность прежде всего» и ориентированный на безопасность UX.",
+    proj_calamares: "Основа установщика для дистрибутива Linux, ориентированного на безопасность. Процесс установки, брендинг дистрибутива, параметры конфиденциальности и подобранный выбор пакетов.",
+    proj_welcome: "Опыт подготовки и пост-установки для Null Linux. Обнаружение инструментов, рабочие процессы безопасности на основе ролей, многоязычный UX и практическая настройка системы.",
+    sec_arsenal: "Инженерный арсенал",
+    sec_arsenal_sub: "Средства производства",
+    stack_lang: "Языки и среда выполнения",
+    stack_backend: "Бэкенд, фронтенд и данные",
+    stack_infra: "Инфраструктура и операции",
+    sec_security: "Операции безопасности",
+    sec_security_sub: "Экосистема инструментов",
+    tools_web: "Веб, AppSec и разведка",
+    tools_net: "Сеть, уязвимости и анализ трафика",
+    tools_blue: "Синяя команда, обнаружение и разведка",
+    sec_linux: "Системы и дистрибутивы",
+    sec_linux_sub: "Инженерия Linux",
+    sec_comms: "Связь",
+    sec_comms_sub: "Установить контакт",
+    footer_motto: "«Понимать, как работают системы, проектировать чистые архитектуры.»",
+  },
+  tr: {
+    hero_subtitle: "Güvenlik odaklı platformlar, siber istihbarat sistemleri, gizlilik araçları ve Linux tabanlı ortamlar inşa ediyorum.",
+    role_sec: "Güvenlik Mühendisliği",
+    role_cti: "Siber Tehdit İstihbaratı",
+    role_osint: "OSINT",
+    role_devsecops: "DevSecOps",
+    role_linux: "Linux Mühendisliği",
+    nav_manifesto: "Manifesto",
+    nav_anthem: "Marş",
+    nav_projects: "Projeler",
+    nav_arsenal: "Cephanelik",
+    nav_operations: "Operasyonlar",
+    nav_systems: "Sistemler",
+    nav_comms: "İletişim",
+    sec_manifesto: "Manifesto",
+    sec_manifesto_sub: "Kimlik ve Yön",
+    about_p1: "Güvenlik odaklı platformlar, siber istihbarat sistemleri, gizlilik araçları ve Linux tabanlı ortamlar inşa ediyorum. Çalışmam proje odaklıdır ve yazılım mühendisliği, siber tehdit istihbaratı, OSINT, Linux güvenliği, altyapı otomasyonu, gizlilik mühendisliği ve DevSecOps arasında yer alır.",
+    about_p2: "Gerçek güvenlik iş akışlarını destekleyen pratik sistemler tasarlamaya odaklanıyorum — anlaşılır, kendi barındırmalı, gizlilik bilincine sahip ve sürdürülebilir — mevcut araçları sadece kullanmak yerine.",
+    about_p3: "Hazır araçlara güvenmek yerine pratik sistemler inşa etmeyi tercih ediyorum — sistemlerin nasıl çalıştığını anlamak, temiz mimariler tasarlamak ve projeleri gerçek test, otomasyon ve operasyonel düşünceyle geliştirmek.",
+    dir_cti: "Siber Tehdit İstihbaratı",
+    dir_asm: "Saldırı Yüzeyi İzleme",
+    dir_osint: "OSINT ve Otomasyon",
+    dir_linux: "Linux Güvenliği",
+    dir_privacy: "Gizlilik ve OPSEC",
+    dir_devops: "DevOps / SecOps",
+    dir_products: "Güvenlik Ürünleri",
+    sec_anthem: "Marş",
+    sec_anthem_sub: "Vatanın Sesi",
+    sec_projects: "Proje Portföyü",
+    sec_projects_sub: "Halkın Mühendislik Bürosu Eserleri",
+    proj_nexus: "Modüler siber tehdit istihbaratı ve dış saldırı yüzeyi izleme platformu. Sızdırılmış kimlik bilgileri, tehdit tespitleri, uyarılar, olaylar, sahte alan adları, karanlık web sinyalleri, tedarikçi riskleri, VIP koruması ve uyumluluk iş akışları.",
+    proj_null: "Güvenlik araştırması, gizlilik ve saldırı/savunma iş akışları için Arch tabanlı siber güvenlik dağıtımı. Red team, blue team, OSINT, OPSEC, adli bilişim ve gizlilik odaklı günlük kullanım için özenle seçilmiş araçlar.",
+    proj_rss: "Siber güvenlik, yapay zeka ve teknoloji içeriği için kendi barındırmalı istihbarat beslemesi toplayıcı. Temiz istihbarat odaklı iş akışlarıyla ilgili teknik içeriği toplar, normalleştirir, sınıflandırır ve sunar.",
+    proj_broowser: "Gizlilik, güvenlik, sertleştirilmiş varsayılanlar ve daha temiz bir gezinme deneyimine odaklanan Firefox tabanlı tarayıcı. Gizlilik öncelikli yapılandırma ve güvenlik odaklı UX.",
+    proj_calamares: "Güvenlik odaklı bir Linux dağıtımı için yükleyici temeli. Kurulum akışı, dağıtım markalaması, gizlilik seçenekleri ve özenle seçilmiş paket seçimi.",
+    proj_welcome: "Null Linux için hazırlık ve kurulum sonrası deneyim. Araç keşfi, rol tabanlı güvenlik iş akışları, çok dilli UX ve pratik sistem kurulumu.",
+    sec_arsenal: "Mühendislik Cephaneliği",
+    sec_arsenal_sub: "Üretim Araçları",
+    stack_lang: "Diller ve Çalışma Zamanı",
+    stack_backend: "Backend, Frontend ve Veri",
+    stack_infra: "Altyapı ve Operasyonlar",
+    sec_security: "Güvenlik Operasyonları",
+    sec_security_sub: "Araç Ekosistemi",
+    tools_web: "Web, AppSec ve Keşif",
+    tools_net: "Ağ, Zafiyet ve Trafik Analizi",
+    tools_blue: "Mavi Takım, Tespit ve İstihbarat",
+    sec_linux: "Sistemler ve Dağıtımlar",
+    sec_linux_sub: "Linux Mühendisliği",
+    sec_comms: "İletişim",
+    sec_comms_sub: "İrtibat Kur",
+    footer_motto: "\"Sistemlerin nasıl çalıştığını anlamak, temiz mimariler tasarlamak.\"",
+  },
+  ar: {
+    hero_subtitle: "بناء منصات أمنية، أنظمة استخبارات سيبرانية، أدوات خصوصية، وبيئات مبنية على لينكس.",
+    role_sec: "هندسة الأمن",
+    role_cti: "الاستخبارات السيبرانية",
+    role_osint: "OSINT",
+    role_devsecops: "DevSecOps",
+    role_linux: "هندسة لينكس",
+    nav_manifesto: "البيان",
+    nav_anthem: "النشيد",
+    nav_projects: "المشاريع",
+    nav_arsenal: "الترسانة",
+    nav_operations: "العمليات",
+    nav_systems: "الأنظمة",
+    nav_comms: "الاتصالات",
+    sec_manifesto: "البيان",
+    sec_manifesto_sub: "الهوية والاتجاه",
+    about_p1: "أبني منصات تركز على الأمن، وأنظمة استخبارات سيبرانية، وأدوات خصوصية، وبيئات مبنية على لينكس. عملي موجه بالمشاريع ويقع بين هندسة البرمجيات، والاستخبارات السيبرانية، وOSINT، وأمن لينكس، وأتمتة البنية التحتية، وهندسة الخصوصية، وDevSecOps.",
+    about_p2: "أركز على تصميم أنظمة عملية تدعم سير عمل أمني حقيقي — مفهومة، ذاتية الاستضافة، واعية بالخصوصية، وقابلة للصيانة — بدلاً من الاعتماد فقط على الأدوات الموجودة.",
+    about_p3: "أفضل بناء أنظمة عملية بدلاً من الاعتماد على أدوات جاهزة — فهم كيفية عمل الأنظمة، وتصميم بنى نظيفة، وتحسين المشاريع من خلال الاختبار الحقيقي والأتمتة والتفكير التشغيلي.",
+    dir_cti: "الاستخبارات السيبرانية",
+    dir_asm: "مراقبة سطح الهجوم",
+    dir_osint: "OSINT والأتمتة",
+    dir_linux: "أمن لينكس",
+    dir_privacy: "الخصوصية وOPSEC",
+    dir_devops: "DevOps / SecOps",
+    dir_products: "منتجات الأمن",
+    sec_anthem: "النشيد",
+    sec_anthem_sub: "صوت الوطن",
+    sec_projects: "محفظة المشاريع",
+    sec_projects_sub: "أعمال مكتب الهندسة الشعبي",
+    proj_nexus: "منصة استخبارات سيبرانية معيارية ومراقبة سطح الهجوم الخارجي. تسريبات بيانات الاعتماد، كشف التهديدات، التنبيهات، الحوادث، النطاقات المزيفة، إشارات الويب المظلم، مخاطر الموردين، حماية الشخصيات المهمة وسير عمل الامتثال.",
+    proj_null: "توزيعة أمن سيبراني مبنية على Arch للبحث الأمني والخصوصية وسير العمل الهجومي/الدفاعي. أدوات مختارة بعناية للفريق الأحمر والأزرق وOSINT وOPSEC والتحقيق الجنائي والاستخدام اليومي مع التركيز على الخصوصية.",
+    proj_rss: "مجمّع تغذية استخباراتية ذاتي الاستضافة للأمن السيبراني والذكاء الاصطناعي والمحتوى التقني. يجمع ويوحد ويصنف ويعرض المحتوى التقني ذي الصلة عبر سير عمل استخباراتي نظيف.",
+    proj_broowser: "متصفح مبني على Firefox يركز على الخصوصية والأمان والإعدادات الافتراضية المقواة وتجربة تصفح أنظف. تكوين الخصوصية أولاً وتجربة مستخدم موجهة بالأمان.",
+    proj_calamares: "أساس المثبّت لتوزيعة لينكس مركزة على الأمان. تدفق التثبيت، العلامة التجارية للتوزيعة، خيارات الخصوصية، واختيار الحزم المنتقاة.",
+    proj_welcome: "تجربة الإعداد وما بعد التثبيت لـ Null Linux. اكتشاف الأدوات، سير عمل أمني قائم على الأدوار، تجربة مستخدم متعددة اللغات، وإعداد نظام عملي.",
+    sec_arsenal: "الترسانة الهندسية",
+    sec_arsenal_sub: "وسائل الإنتاج",
+    stack_lang: "اللغات وبيئة التشغيل",
+    stack_backend: "الخلفية والواجهة والبيانات",
+    stack_infra: "البنية التحتية والعمليات",
+    sec_security: "عمليات الأمن",
+    sec_security_sub: "النظام البيئي للأدوات",
+    tools_web: "الويب وأمن التطبيقات والاستطلاع",
+    tools_net: "الشبكات والثغرات وتحليل حركة المرور",
+    tools_blue: "الفريق الأزرق والكشف والاستخبارات",
+    sec_linux: "الأنظمة والتوزيعات",
+    sec_linux_sub: "هندسة لينكس",
+    sec_comms: "الاتصالات",
+    sec_comms_sub: "إنشاء اتصال",
+    footer_motto: "\"فهم كيفية عمل الأنظمة، تصميم بنى نظيفة.\"",
+  },
+  en: {
+    hero_subtitle: "Building security-focused platforms, cyber intelligence systems, privacy-oriented tools, and Linux-based environments.",
+    role_sec: "Security Engineering",
+    role_cti: "Cyber Threat Intelligence",
+    role_osint: "OSINT",
+    role_devsecops: "DevSecOps",
+    role_linux: "Linux Engineering",
+    nav_manifesto: "Manifesto",
+    nav_anthem: "Anthem",
+    nav_projects: "Projects",
+    nav_arsenal: "Arsenal",
+    nav_operations: "Operations",
+    nav_systems: "Systems",
+    nav_comms: "Comms",
+    sec_manifesto: "Manifesto",
+    sec_manifesto_sub: "Identity & Direction",
+    about_p1: "I build security-focused platforms, cyber intelligence systems, privacy-oriented tools, and Linux-based environments. My work is project-driven and sits between software engineering, cyber threat intelligence, OSINT, Linux security, infrastructure automation, privacy engineering, and DevSecOps.",
+    about_p2: "I focus on designing practical systems that support real security workflows — understandable, self-hosted, privacy-conscious, and maintainable — instead of only using existing tools.",
+    about_p3: "I prefer building practical systems over relying on ready-made tools — understanding how systems work, designing clean architectures, and improving projects through real testing, automation, and operational thinking.",
+    dir_cti: "Cyber Threat Intelligence",
+    dir_asm: "Attack Surface Monitoring",
+    dir_osint: "OSINT & Automation",
+    dir_linux: "Linux Security",
+    dir_privacy: "Privacy & OPSEC",
+    dir_devops: "DevOps / SecOps",
+    dir_products: "Security Products",
+    sec_anthem: "Anthem",
+    sec_anthem_sub: "Sound of the Motherland",
+    sec_projects: "Project Portfolio",
+    sec_projects_sub: "Works of the People's Engineering Bureau",
+    proj_nexus: "Modular cyber threat intelligence and external attack surface monitoring platform. Leaked credentials, threat detections, alerts, incidents, fake domains, dark web signals, vendor risk, VIP protection, and compliance workflows.",
+    proj_null: "Arch-based cybersecurity distribution for security research, privacy, and offensive/defensive workflows. Curated tooling for red team, blue team, OSINT, OPSEC, forensics, and privacy-focused daily usage.",
+    proj_rss: "Self-hosted intelligence feed aggregator for cybersecurity, AI, and technology content. Collects, normalizes, classifies, and presents relevant technical content through clean intelligence-oriented workflows.",
+    proj_broowser: "Firefox-based browser focused on privacy, security, hardened defaults, and a cleaner browsing experience. Privacy-first configuration and security-oriented UX.",
+    proj_calamares: "Installer foundation for a security-focused Linux distribution. Installation flow, distribution branding, privacy options, and curated package selection.",
+    proj_welcome: "Onboarding and post-install experience for Null Linux. Tool discovery, role-based security workflows, multilingual UX, and practical system setup.",
+    sec_arsenal: "Engineering Arsenal",
+    sec_arsenal_sub: "Instruments of Production",
+    stack_lang: "Languages & Runtime",
+    stack_backend: "Backend, Frontend & Data",
+    stack_infra: "Infrastructure & Operations",
+    sec_security: "Security Operations",
+    sec_security_sub: "The Tooling Ecosystem",
+    tools_web: "Web, AppSec & Reconnaissance",
+    tools_net: "Network, Vulnerability & Traffic Analysis",
+    tools_blue: "Blue Team, Detection & Intelligence",
+    sec_linux: "Systems & Distributions",
+    sec_linux_sub: "Linux Engineering",
+    sec_comms: "Communications",
+    sec_comms_sub: "Establish Contact",
+    footer_motto: "\"Understanding how systems work, designing clean architectures.\"",
+  }
+};
+
+function setLanguage(lang) {
+  const t = translations[lang];
+  if (!t) return;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) el.textContent = t[key];
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+
+  const isRtl = lang === 'ar';
+  document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+
+  try { localStorage.setItem('lang', lang); } catch {}
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    setLanguage(btn.getAttribute('data-lang'));
+  });
+});
+
+let savedLang = null;
+try { savedLang = localStorage.getItem('lang'); } catch {}
+setLanguage(savedLang || 'ru');
+</script>
