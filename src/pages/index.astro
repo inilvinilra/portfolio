@@ -27,6 +27,7 @@ import Layout from '../layouts/Layout.astro';
   <nav class="nav-strip">
     <ul>
       <li><a href="#about" data-i18n="nav_manifesto">Манифест</a></li>
+      <li><a href="#blog" data-i18n="nav_blog">Блог</a></li>
       <li><a href="#anthem" data-i18n="nav_anthem">Покой</a></li>
       <li><a href="#projects" data-i18n="nav_projects">Проекты</a></li>
       <li><a href="#stack" data-i18n="nav_arsenal">Арсенал</a></li>
@@ -79,6 +80,24 @@ import Layout from '../layouts/Layout.astro';
           <li data-i18n="dir_devops">DevOps / SecOps</li>
           <li data-i18n="dir_products">Продукты безопасности</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BLOG ═══ -->
+  <section id="blog" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_blog">Блог</h2>
+        <p data-i18n="sec_blog_sub">Последние записи</p>
+      </div>
+      <div id="blog-posts" class="blog-grid">
+        <p class="blog-loading" data-i18n="blog_loading">Загрузка записей...</p>
+      </div>
+      <div class="blog-footer">
+        <a href="https://inilvinilra.mataroa.blog" target="_blank" rel="noopener" class="blog-link" data-i18n="blog_all">
+          Все записи →
+        </a>
       </div>
     </div>
   </section>
@@ -446,6 +465,7 @@ const translations = {
     role_devsecops: "DevSecOps",
     role_linux: "Инженерия Linux",
     nav_manifesto: "Манифест",
+    nav_blog: "Блог",
     nav_anthem: "Покой",
     nav_projects: "Проекты",
     nav_arsenal: "Арсенал",
@@ -465,6 +485,11 @@ const translations = {
     dir_privacy: "Конфиденциальность и OPSEC",
     dir_devops: "DevOps / SecOps",
     dir_products: "Продукты безопасности",
+    sec_blog: "Блог",
+    sec_blog_sub: "Последние записи",
+    blog_loading: "Загрузка записей...",
+    blog_empty: "Записей пока нет",
+    blog_all: "Все записи →",
     sec_anthem: "Покой",
     sec_projects: "Портфолио проектов",
     sec_projects_sub: "Труды инженерного бюро народа",
@@ -500,6 +525,7 @@ const translations = {
     role_devsecops: "DevSecOps",
     role_linux: "Linux Mühendisliği",
     nav_manifesto: "Manifesto",
+    nav_blog: "Blog",
     nav_anthem: "Huzur",
     nav_projects: "Projeler",
     nav_arsenal: "Cephanelik",
@@ -519,6 +545,11 @@ const translations = {
     dir_privacy: "Gizlilik ve OPSEC",
     dir_devops: "DevOps / SecOps",
     dir_products: "Güvenlik Ürünleri",
+    sec_blog: "Blog",
+    sec_blog_sub: "Son Yazılar",
+    blog_loading: "Yazılar yükleniyor...",
+    blog_empty: "Henüz yazı yok",
+    blog_all: "Tüm yazılar →",
     sec_anthem: "Huzur",
     sec_projects: "Proje Portföyü",
     sec_projects_sub: "Halkın Mühendislik Bürosu Eserleri",
@@ -554,6 +585,7 @@ const translations = {
     role_devsecops: "DevSecOps",
     role_linux: "هندسة لينكس",
     nav_manifesto: "البيان",
+    nav_blog: "المدونة",
     nav_anthem: "سكينة",
     nav_projects: "المشاريع",
     nav_arsenal: "الترسانة",
@@ -572,6 +604,11 @@ const translations = {
     dir_privacy: "الخصوصية وOPSEC",
     dir_devops: "DevOps / SecOps",
     dir_products: "منتجات الأمن",
+    sec_blog: "المدونة",
+    sec_blog_sub: "آخر المقالات",
+    blog_loading: "جارٍ تحميل المقالات...",
+    blog_empty: "لا توجد مقالات بعد",
+    blog_all: "جميع المقالات ←",
     sec_anthem: "سكينة",
     sec_projects: "محفظة المشاريع",
     sec_projects_sub: "أعمال مكتب الهندسة الشعبي",
@@ -607,6 +644,7 @@ const translations = {
     role_devsecops: "DevSecOps",
     role_linux: "Linux Engineering",
     nav_manifesto: "Manifesto",
+    nav_blog: "Blog",
     nav_anthem: "Serenity",
     nav_projects: "Projects",
     nav_arsenal: "Arsenal",
@@ -626,6 +664,11 @@ const translations = {
     dir_privacy: "Privacy & OPSEC",
     dir_devops: "DevOps / SecOps",
     dir_products: "Security Products",
+    sec_blog: "Blog",
+    sec_blog_sub: "Latest Posts",
+    blog_loading: "Loading posts...",
+    blog_empty: "No posts yet",
+    blog_all: "All posts →",
     sec_anthem: "Serenity",
     sec_projects: "Project Portfolio",
     sec_projects_sub: "Works of the People's Engineering Bureau",
@@ -683,4 +726,50 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 let savedLang = null;
 try { savedLang = localStorage.getItem('lang'); } catch {}
 setLanguage(savedLang || 'ru');
+
+async function fetchBlog() {
+  const container = document.getElementById('blog-posts');
+  if (!container) return;
+
+  const rssUrl = 'https://inilvinilra.mataroa.blog/rss/';
+  const proxies = [
+    rssUrl,
+    'https://api.allorigins.win/raw?url=' + encodeURIComponent(rssUrl),
+  ];
+
+  let xml = null;
+  for (const url of proxies) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) continue;
+      const text = await res.text();
+      const doc = new DOMParser().parseFromString(text, 'text/xml');
+      if (doc.querySelector('item')) { xml = doc; break; }
+    } catch {}
+  }
+
+  if (!xml) {
+    const lang = document.documentElement.lang || 'ru';
+    container.innerHTML = '<p class="blog-empty">' + (translations[lang]?.blog_empty || 'Нет записей') + '</p>';
+    return;
+  }
+
+  const items = Array.from(xml.querySelectorAll('item')).slice(0, 6);
+  container.innerHTML = items.map(item => {
+    const title = item.querySelector('title')?.textContent || '';
+    const link = item.querySelector('link')?.textContent || '#';
+    const pubDate = item.querySelector('pubDate')?.textContent;
+    let dateStr = '';
+    if (pubDate) {
+      const d = new Date(pubDate);
+      dateStr = d.toLocaleDateString('ru-RU', { year: 'numeric', month: 'short', day: 'numeric' });
+    }
+    return '<a href="' + link + '" target="_blank" rel="noopener" class="blog-card">' +
+      (dateStr ? '<span class="blog-card-date">' + dateStr + '</span>' : '') +
+      '<span class="blog-card-title">' + title + '</span>' +
+    '</a>';
+  }).join('');
+}
+
+fetchBlog();
 </script>
