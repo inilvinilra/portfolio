@@ -997,18 +997,8 @@ a:hover {
   color: var(--soviet-ink);
   font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 4px;
-  font-family: var(--font-body);
-}
-
-.bounty-target {
-  display: block;
-  color: var(--soviet-ink);
-  font-size: 0.78rem;
-  opacity: 0.55;
   margin-bottom: 12px;
-  font-family: monospace;
-  letter-spacing: 0.02em;
+  font-family: var(--font-body);
 }
 
 .bounty-tags {
@@ -1055,17 +1045,6 @@ a:hover {
   border-color: var(--soviet-paper-dark);
   color: var(--soviet-brown-light);
   background: rgba(93,64,55,0.06);
-}
-
-.bounty-reward {
-  font-family: var(--font-display);
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border: 2px solid var(--soviet-olive);
-  color: var(--soviet-olive);
-  background: rgba(74,83,56,0.12);
-  letter-spacing: 0.05em;
 }
 
 .bounty-cve {
