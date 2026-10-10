@@ -33,6 +33,7 @@ import Layout from '../layouts/Layout.astro';
       <li><a href="#stack" data-i18n="nav_arsenal">Арсенал</a></li>
       <li><a href="#security" data-i18n="nav_operations">Операции</a></li>
       <li><a href="#certs" data-i18n="nav_certs">Аттестации</a></li>
+      <li><a href="#bounty" data-i18n="nav_bounty">Баунти</a></li>
       <li><a href="#linux" data-i18n="nav_systems">Системы</a></li>
       <li><a href="#contact" data-i18n="nav_comms">Связь</a></li>
       <li class="lang-switcher">
@@ -355,6 +356,137 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- ═══ BUG BOUNTY ═══ -->
+  <section id="bounty" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="sec_bounty">Охота за уязвимостями</h2>
+        <p data-i18n="sec_bounty_sub">Ответственное раскрытие</p>
+      </div>
+      <div class="bounty-grid">
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>Fortinet</h3>
+          </div>
+          <span class="bounty-type">Improper Access Control</span>
+          <span class="bounty-target">FortiClient Android</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-progress" data-i18n="bounty_progress">В процессе</span>
+            <span class="bounty-cve" data-i18n="bounty_cve_soon">CVE: Ожидается</span>
+          </div>
+        </div>
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>UK Government</h3>
+            <span class="bounty-org-sub">National Crime Agency</span>
+          </div>
+          <span class="bounty-type">IDOR</span>
+          <span class="bounty-target">nationalcrimeagency.gov.uk</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-resolved" data-i18n="bounty_resolved">Решено</span>
+          </div>
+        </div>
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>GitHub</h3>
+          </div>
+          <span class="bounty-type">Information Disclosure</span>
+          <span class="bounty-target">learn.github.com</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-resolved" data-i18n="bounty_resolved">Решено</span>
+            <span class="bounty-reward">$617</span>
+          </div>
+        </div>
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>Crypto.com</h3>
+          </div>
+          <span class="bounty-type">Hardcoded Credentials</span>
+          <span class="bounty-target">co.mona.android</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-duplicate" data-i18n="bounty_duplicate">Дубликат</span>
+          </div>
+        </div>
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>Palo Alto Networks</h3>
+          </div>
+          <span class="bounty-type">SSTI → RCE</span>
+          <span class="bounty-target">panos-bootstrapper</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-closed" data-i18n="bounty_closed">Закрыто</span>
+          </div>
+        </div>
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>TikTok</h3>
+            <span class="bounty-count">×2</span>
+          </div>
+          <span class="bounty-type">Hardcoded Credentials · Improper Authorization</span>
+          <span class="bounty-target">com.zhiliaoapp.musically</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-duplicate" data-i18n="bounty_duplicate">Дубликат</span>
+          </div>
+        </div>
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>Akbank</h3>
+            <span class="bounty-count">×2</span>
+          </div>
+          <span class="bounty-type">Access Control · Design Principles</span>
+          <span class="bounty-target">Web</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-completed" data-i18n="bounty_completed">Завершено</span>
+            <span class="bounty-reward">€750</span>
+          </div>
+        </div>
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>Turkish Airlines</h3>
+          </div>
+          <span class="bounty-type">Information Disclosure</span>
+          <span class="bounty-target">Android</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-completed" data-i18n="bounty_completed">Завершено</span>
+            <span class="bounty-reward">$100</span>
+          </div>
+        </div>
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>NASA</h3>
+            <span class="bounty-count">×2</span>
+          </div>
+          <span class="bounty-type">Information Disclosure</span>
+          <span class="bounty-target">nasa.gov</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-progress" data-i18n="bounty_progress">В процессе</span>
+          </div>
+        </div>
+
+        <div class="bounty-card">
+          <div class="bounty-header">
+            <h3>Dropbox</h3>
+          </div>
+          <span class="bounty-type">—</span>
+          <span class="bounty-target">—</span>
+          <div class="bounty-tags">
+            <span class="bounty-status bounty-resolved" data-i18n="bounty_resolved">Решено</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ LINUX ═══ -->
   <section id="linux" class="section">
     <div class="container">
@@ -511,6 +643,15 @@ const translations = {
     tools_blue: "Синяя команда, обнаружение и разведка",
     sec_certs: "Аттестации",
     sec_certs_sub: "Профессиональные сертификации",
+    nav_bounty: "Баунти",
+    sec_bounty: "Охота за уязвимостями",
+    sec_bounty_sub: "Ответственное раскрытие",
+    bounty_resolved: "Решено",
+    bounty_duplicate: "Дубликат",
+    bounty_progress: "В процессе",
+    bounty_closed: "Закрыто",
+    bounty_completed: "Завершено",
+    bounty_cve_soon: "CVE: Ожидается",
     sec_linux: "Системы и дистрибутивы",
     sec_linux_sub: "Инженерия Linux",
     sec_comms: "Связь",
@@ -571,6 +712,15 @@ const translations = {
     tools_blue: "Mavi Takım, Tespit ve İstihbarat",
     sec_certs: "Sertifikalar",
     sec_certs_sub: "Profesyonel Sertifikalar",
+    nav_bounty: "Bug Bounty",
+    sec_bounty: "Zafiyet Avı",
+    sec_bounty_sub: "Sorumlu Açıklama",
+    bounty_resolved: "Çözüldü",
+    bounty_duplicate: "Mükerrer",
+    bounty_progress: "Devam Ediyor",
+    bounty_closed: "Kapatıldı",
+    bounty_completed: "Tamamlandı",
+    bounty_cve_soon: "CVE: Yakında",
     sec_linux: "Sistemler ve Dağıtımlar",
     sec_linux_sub: "Linux Mühendisliği",
     sec_comms: "İletişim",
@@ -630,6 +780,16 @@ const translations = {
     tools_blue: "الفريق الأزرق والكشف والاستخبارات",
     sec_certs: "الشهادات",
     sec_certs_sub: "الشهادات المهنية",
+    nav_certs: "الشهادات",
+    nav_bounty: "المكافآت",
+    sec_bounty: "صيد الثغرات",
+    sec_bounty_sub: "الإفصاح المسؤول",
+    bounty_resolved: "تم الحل",
+    bounty_duplicate: "مكرر",
+    bounty_progress: "قيد المعالجة",
+    bounty_closed: "مغلق",
+    bounty_completed: "مكتمل",
+    bounty_cve_soon: "CVE: قريباً",
     sec_linux: "الأنظمة والتوزيعات",
     sec_linux_sub: "هندسة لينكس",
     sec_comms: "الاتصالات",
@@ -690,6 +850,15 @@ const translations = {
     tools_blue: "Blue Team, Detection & Intelligence",
     sec_certs: "Certifications",
     sec_certs_sub: "Professional Certifications",
+    nav_bounty: "Bug Bounty",
+    sec_bounty: "Bug Bounty",
+    sec_bounty_sub: "Responsible Disclosure",
+    bounty_resolved: "Resolved",
+    bounty_duplicate: "Duplicate",
+    bounty_progress: "In Progress",
+    bounty_closed: "Closed",
+    bounty_completed: "Completed",
+    bounty_cve_soon: "CVE: Coming Soon",
     sec_linux: "Systems & Distributions",
     sec_linux_sub: "Linux Engineering",
     sec_comms: "Communications",

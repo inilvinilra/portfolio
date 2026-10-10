@@ -924,6 +924,161 @@ a:hover {
    RESPONSIVE
    ═══════════════════════════════════════════════ */
 
+/* ═══════════════════════════════════════════════
+   BUG BOUNTY
+   ═══════════════════════════════════════════════ */
+
+.bounty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.2rem;
+}
+
+.bounty-card {
+  background: rgba(255,255,255,0.4);
+  border: 2px solid var(--soviet-brown);
+  padding: 20px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.bounty-card:hover {
+  transform: translateY(-3px);
+}
+
+.bounty-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--soviet-gold);
+}
+
+.bounty-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.bounty-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--soviet-brown);
+  margin: 0;
+}
+
+.bounty-org-sub {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--soviet-ink);
+  opacity: 0.6;
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.bounty-count {
+  background: var(--soviet-red);
+  color: var(--soviet-cream);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  font-family: var(--font-display);
+}
+
+.bounty-type {
+  display: block;
+  color: var(--soviet-ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-family: var(--font-body);
+}
+
+.bounty-target {
+  display: block;
+  color: var(--soviet-ink);
+  font-size: 0.78rem;
+  opacity: 0.55;
+  margin-bottom: 12px;
+  font-family: monospace;
+  letter-spacing: 0.02em;
+}
+
+.bounty-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.bounty-status {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border: 2px solid;
+}
+
+.bounty-resolved {
+  border-color: var(--soviet-olive);
+  color: var(--soviet-olive);
+  background: rgba(74,83,56,0.08);
+}
+
+.bounty-completed {
+  border-color: var(--soviet-olive);
+  color: var(--soviet-olive);
+  background: rgba(74,83,56,0.08);
+}
+
+.bounty-duplicate {
+  border-color: var(--soviet-gold);
+  color: var(--soviet-rust);
+  background: rgba(197,165,90,0.1);
+}
+
+.bounty-progress {
+  border-color: var(--soviet-red-bright);
+  color: var(--soviet-red);
+  background: rgba(196,30,58,0.06);
+}
+
+.bounty-closed {
+  border-color: var(--soviet-paper-dark);
+  color: var(--soviet-brown-light);
+  background: rgba(93,64,55,0.06);
+}
+
+.bounty-reward {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border: 2px solid var(--soviet-olive);
+  color: var(--soviet-olive);
+  background: rgba(74,83,56,0.12);
+  letter-spacing: 0.05em;
+}
+
+.bounty-cve {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border: 2px dashed var(--soviet-gold);
+  color: var(--soviet-rust);
+  background: rgba(197,165,90,0.08);
+  letter-spacing: 0.05em;
+}
+
 @media (max-width: 640px) {
   .hero {
     padding: 50px 0 40px;
@@ -954,6 +1109,10 @@ a:hover {
   }
 
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bounty-grid {
     grid-template-columns: 1fr;
   }
 
